@@ -80,6 +80,9 @@ void loop() {
 
             Serial.print("Temp:");
             Serial.println(temp);
+
+            Serial.print("Wifi strength: ");
+            Serial.println(WiFi.RSSI());
         } else {
             Serial.println("ERROR!");
         }
