@@ -9,7 +9,7 @@ void setup() {
     Serial.begin(9600);
     delay(10000);
 
-    // initWiFi();
+    initWiFi();
     initServo(servo);
     initAirQualitySensor(ccs);
     Serial.println("All started!");
@@ -37,9 +37,6 @@ void loop() {
             Serial.print("Temp:");
             Serial.println(temp);
 
-            Serial.print("Wifi strength: ");
-            Serial.println(WiFi.RSSI());
-
             Serial.println("*****\n");
 
             if (co2 > 1000) {
@@ -47,8 +44,6 @@ void loop() {
             } else {
                 servo.write(160);
             }
-        } else {
-            Serial.println("ERROR!");
         }
     }
     digitalWrite(LED_BUILTIN, LOW);

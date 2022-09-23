@@ -50,6 +50,7 @@ void initServo(Servo& servo) {
     Serial.println("Initializing Servo...");
 
     servo.attach(9);
+
     Serial.println("Servo initialized!");
     Serial.println("*****\n");
 }
