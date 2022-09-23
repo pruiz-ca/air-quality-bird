@@ -8,13 +8,8 @@
 #include <SevSeg.h>  // Seven Segment Display
 #include <WiFiNINA.h>
 
-extern int aqSensorMode;
-extern Adafruit_CCS811 aqSensor;
-extern Servo servo;
-extern float temp;
-
+void initAirQualitySensor(Adafruit_CCS811& ccs);
+void initServo(Servo& servo);
 void initWiFi();
-void initAirQualitySensor();
-void initServo();
 
 #endif
